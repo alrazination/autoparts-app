@@ -319,8 +319,8 @@
       <div class="form-group"><label>Min Qty (Alert)</label><input type="number" id="pf-minqty" min="0" placeholder="5"/></div>
     </div>
     <div class="form-row">
-      <div class="form-group"><label>Buy Price (KSh)</label><input type="number" id="pf-buy" min="0" step="0.01" placeholder="0.00" oninput="updateMarginHint()"/></div>
-      <div class="form-group"><label>Sell Price (KSh)</label><input type="number" id="pf-sell" min="0" step="0.01" placeholder="0.00" oninput="updateMarginHint()"/></div>
+      <div class="form-group"><label>Buy Price (₹)</label><input type="number" id="pf-buy" min="0" step="0.01" placeholder="0.00" oninput="updateMarginHint()"/></div>
+      <div class="form-group"><label>Sell Price (₹)</label><input type="number" id="pf-sell" min="0" step="0.01" placeholder="0.00" oninput="updateMarginHint()"/></div>
     </div>
     <div class="margin-hint" id="margin-hint" style="display:none"></div>
     <div class="modal-actions">
@@ -374,7 +374,7 @@ let editingPartId = null;
 let billItems = [];
 
 // ─── UTILS ────────────────────────────────────────────────────────────────────
-const fmt = n => 'KSh ' + Number(n).toLocaleString('en-KE', {minimumFractionDigits:2,maximumFractionDigits:2});
+const fmt = n => '₹' + Number(n).toLocaleString('en-IN', {minimumFractionDigits:2,maximumFractionDigits:2});
 const uid = () => Date.now() + Math.random().toString(36).slice(2,6);
 const $  = id => document.getElementById(id);
 
